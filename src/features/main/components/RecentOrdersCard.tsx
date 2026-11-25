@@ -1,140 +1,93 @@
 import type { ComponentProps } from "react"
-import { ArrowLeftIcon } from "lucide-react"
-import { Link } from "react-router-dom"
+import { PackageIcon } from "lucide-react"
 
+import { AnimatedList } from "@/components/ui/animated-list"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
-import { ROUTES } from "@/constants/routes"
-import { formatCurrency } from "@/lib/formater"
+import { Card, CardContent } from "@/components/ui/card"
+import DashboardEmptyState from "@/features/main/components/DashboardEmptyState"
+import { formatCurrency, getOrderStatusBadgeClass } from "@/lib/formater"
 import { cn } from "@/lib/utils"
+import type { Order } from "@/types/Order"
 
-type PreviewOrderStatus = "جديد" | "في الطريق" | "تم التوصيل"
-
-type PreviewOrder = {
-  id: string
-  customerName: string
-  amount: number
-  date: string
-  status: PreviewOrderStatus
-}
-
-const previewOrders: readonly PreviewOrder[] = [
-  {
-    id: "#1024",
-    customerName: "أحمد عبدالكريم المتوكل",
-    amount: 8500,
-    date: "اليوم، 01:40 م",
-    status: "جديد",
-  },
-  {
-    id: "#1023",
-    customerName: "فاطمة محمد الشامي",
-    amount: 14200,
-    date: "اليوم، 12:15 م",
-    status: "في الطريق",
-  },
-  {
-    id: "#1022",
-    customerName: "خالد يحيى الأرياني",
-    amount: 6000,
-    date: "اليوم، 10:50 ص",
-    status: "تم التوصيل",
-  },
-  {
-    id: "#1021",
-    customerName: "سارة علي العواضي",
-    amount: 21500,
-    date: "أمس، 08:30 م",
-    status: "تم التوصيل",
-  },
-]
-
-function statusBadgeClass(status: PreviewOrderStatus): string {
-  if (status === "تم التوصيل") {
-    return "border-transparent bg-success text-success-foreground"
-  }
-  if (status === "جديد") {
-    return "border-transparent bg-brand-lime text-brand-lime-foreground"
-  }
-  return ""
+interface RecentOrdersCardProps extends ComponentProps<typeof Card> {
+  orders?: Order[]
 }
 
 export function RecentOrdersCard({
+  orders = [],
   className,
   ...props
-}: ComponentProps<typeof Card>) {
+}: RecentOrdersCardProps) {
+  const visibleOrders = orders.slice(0, 4)
+
   return (
     <Card
-      className={cn("gap-0 shadow-none md:col-span-2 dark:ring-0", className)}
+      className={cn("gap-0 py-0 shadow-none dark:ring-0", className)}
       {...props}
     >
-      <CardHeader className="border-b">
-        <CardTitle>أحدث الطلبات</CardTitle>
-        <CardDescription>آخر 4 طلبات واردة إلى نظام وصّل</CardDescription>
-      </CardHeader>
+      <div className="flex items-center justify-between border-b px-4 py-2.5">
+        <h3 className="font-bold text-foreground text-sm">أحدث الطلبات</h3>
+        <span className="text-muted-foreground text-xs">آخر 4 طلبات واردة</span>
+      </div>
 
-      <CardContent className="p-0">
-        <Table>
-          <TableHeader>
-            <TableRow className="hover:bg-transparent">
-              <TableHead className="ps-6">رقم الطلب</TableHead>
-              <TableHead>اسم الزبون</TableHead>
-              <TableHead className="hidden sm:table-cell">التاريخ</TableHead>
-              <TableHead className="text-end">المبلغ</TableHead>
-              <TableHead className="pe-6 text-end">الحالة</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {previewOrders.map((order) => (
-              <TableRow className="h-14 hover:bg-transparent" key={order.id}>
-                <TableCell className="ps-6 font-mono font-medium text-xs">
-                  {order.id}
-                </TableCell>
-                <TableCell className="max-w-36 truncate font-medium">
-                  {order.customerName}
-                </TableCell>
-                <TableCell className="hidden text-muted-foreground text-xs sm:table-cell">
-                  {order.date}
-                </TableCell>
-                <TableCell className="text-end font-medium tabular-nums text-sm">
-                  {formatCurrency(order.amount)}
-                </TableCell>
-                <TableCell className="pe-6 text-end">
-                  <Badge
-                    className={statusBadgeClass(order.status)}
-                    variant="secondary"
-                  >
-                    {order.status}
-                  </Badge>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+      <CardContent className="px-0 py-0.5">
+        {visibleOrders.length === 0 ? (
+          <div className="p-4">
+            <DashboardEmptyState message="لا توجد طلبات حديثة" />
+          </div>
+        ) : (
+          <AnimatedList className="gap-0 divide-y divide-border" delay={650}>
+            {visibleOrders.map((order) => {
+              const firstItem = order.items[0]?.name ?? "شحنة توصيل"
+              const extraCount = Math.max(0, order.items.length - 1)
 
-        <div className="flex justify-center border-t py-3">
-          <Button asChild size="sm" variant="ghost">
-            <Link to={ROUTES.DASHBOARD.ORDERS}>
-              عرض جميع الطلبات
-              <ArrowLeftIcon aria-hidden="true" data-icon="inline-end" />
-            </Link>
-          </Button>
-        </div>
+              return (
+                <div
+                  className="flex w-full items-center justify-between gap-2.5 px-4 py-2"
+                  key={order.id}
+                >
+                  <div className="flex min-w-0 items-center gap-2.5">
+                    <span
+                      aria-hidden="true"
+                      className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground [&_svg]:size-4"
+                    >
+                      <PackageIcon />
+                    </span>
+                    <div className="flex min-w-0 flex-col">
+                      <div className="flex items-center gap-1.5">
+                        <span className="font-bold font-mono text-foreground text-xs">
+                          {order.orderNumber}
+                        </span>
+                        <p className="truncate font-semibold text-foreground text-sm">
+                          {order.customerName}
+                        </p>
+                      </div>
+                      <p className="truncate text-muted-foreground text-xs">
+                        {firstItem}
+                        {extraCount > 0 ? ` (+${extraCount})` : ""}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex shrink-0 flex-col items-end gap-0.5">
+                    <span className="font-bold text-foreground tabular-nums text-xs">
+                      {formatCurrency(order.amount)}
+                    </span>
+                    <Badge
+                      className={cn(
+                        "h-5 px-2 text-[11px]",
+                        getOrderStatusBadgeClass(order.status)
+                      )}
+                      variant="secondary"
+                    >
+                      {order.status}
+                    </Badge>
+                  </div>
+                </div>
+              )
+            })}
+          </AnimatedList>
+        )}
       </CardContent>
     </Card>
   )

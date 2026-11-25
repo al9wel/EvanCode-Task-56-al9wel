@@ -6,42 +6,13 @@ import {
 } from "@/components/ui/card"
 import { Delta, DeltaIcon, DeltaValue } from "@/components/ui/delta"
 import { cn } from "@/lib/utils"
+import type { DashboardStatItem } from "@/types/Dashboard"
 
-type Stat = {
-  label: string
-  value: string
-  delta: number
-  footnote: string
+interface DashboardStatsProps {
+  stats: DashboardStatItem[]
 }
 
-const stats: readonly Stat[] = [
-  {
-    label: "الطلبات الجديدة اليوم",
-    value: "42",
-    delta: 12.4,
-    footnote: "مقارنة بالأمس",
-  },
-  {
-    label: "طلبات في الطريق",
-    value: "18",
-    delta: 5.2,
-    footnote: "مقارنة بالأسبوع الماضي",
-  },
-  {
-    label: "متوسط زمن التوصيل",
-    value: "28 د",
-    delta: -8.0,
-    footnote: "أسرع من الأسبوع الماضي",
-  },
-  {
-    label: "نسبة التوصيل المكتمل",
-    value: "94%",
-    delta: 2.1,
-    footnote: "خلال آخر 30 يوماً",
-  },
-]
-
-export function DashboardStats() {
+export function DashboardStats({ stats }: DashboardStatsProps) {
   return (
     <>
       {stats.map((s) => (

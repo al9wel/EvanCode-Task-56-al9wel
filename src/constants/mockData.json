@@ -1,0 +1,464 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "orderNumber": "#1024",
+      "customerName": "أحمد عبدالكريم المتوكل",
+      "phone": "777412580",
+      "address": "صنعاء — حي حدة، جولة المصباحي",
+      "items": [
+        { "name": "سماعة بلوتوث لاسلكية", "quantity": 1 },
+        { "name": "شاحن سريع 65W", "quantity": 1 }
+      ],
+      "amount": 8500,
+      "createdAt": "2026-11-24T14:30:00",
+      "status": "جديد"
+    },
+    {
+      "id": 2,
+      "orderNumber": "#1023",
+      "customerName": "فاطمة محمد الشامي",
+      "phone": "771938420",
+      "address": "صنعاء — شارع الزبيري، أمام مستشفى الجمهوري",
+      "items": [
+        { "name": "حقيبة جلدية نسائية", "quantity": 1 },
+        { "name": "عطر عود ملكي 100مل", "quantity": 1 }
+      ],
+      "amount": 14200,
+      "createdAt": "2026-11-24T12:15:00",
+      "status": "في الطريق"
+    },
+    {
+      "id": 3,
+      "orderNumber": "#1022",
+      "customerName": "خالد يحيى الأرياني",
+      "phone": "733615290",
+      "address": "صنعاء — الأصبحي، شارع المقالح",
+      "items": [
+        { "name": "بن يمني خولاني 1 كجم", "quantity": 1 }
+      ],
+      "amount": 6000,
+      "createdAt": "2026-11-24T10:45:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 4,
+      "orderNumber": "#1021",
+      "customerName": "سارة علي العواضي",
+      "phone": "774820195",
+      "address": "صنعاء — بيت بوس، حي الشباب",
+      "items": [
+        { "name": "خلاط كهربائي منزلي", "quantity": 1 },
+        { "name": "طقم فناجين قهوة", "quantity": 2 }
+      ],
+      "amount": 21500,
+      "createdAt": "2026-11-23T20:30:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 5,
+      "orderNumber": "#1020",
+      "customerName": "عبدالله حسين السنباني",
+      "phone": "770529384",
+      "address": "صنعاء — شارع الستين الجنوبي، فج عطان",
+      "items": [
+        { "name": "لوحة مفاتيح ميكانيكية", "quantity": 1 },
+        { "name": "ماوس لاسلكي", "quantity": 1 }
+      ],
+      "amount": 9800,
+      "createdAt": "2026-11-23T18:10:00",
+      "status": "في الطريق"
+    },
+    {
+      "id": 6,
+      "orderNumber": "#1019",
+      "customerName": "مروان صادق الحكيمي",
+      "phone": "712849301",
+      "address": "صنعاء — الدائري الغربي، جولة الجامعة",
+      "items": [
+        { "name": "وجبة عائلية مشاوي", "quantity": 1 },
+        { "name": "عصير طازج 1 لتر", "quantity": 2 }
+      ],
+      "amount": 4500,
+      "createdAt": "2026-11-23T15:25:00",
+      "status": "جديد"
+    },
+    {
+      "id": 7,
+      "orderNumber": "#1018",
+      "customerName": "نورا عبدالرحمن الكبسي",
+      "phone": "775102938",
+      "address": "صنعاء — شارع الجزائر، بجوار المركز الليبي",
+      "items": [
+        { "name": "عسل سدر دوعني نصف كجم", "quantity": 1 },
+        { "name": "مكسرات مشكلة فاخرة", "quantity": 1 }
+      ],
+      "amount": 17600,
+      "createdAt": "2026-11-23T11:40:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 8,
+      "orderNumber": "#1017",
+      "customerName": "ياسر قاسم المقطري",
+      "phone": "736491820",
+      "address": "صنعاء — التحرير، شارع القصر",
+      "items": [
+        { "name": "حامل لابتوب ألمنيوم", "quantity": 1 }
+      ],
+      "amount": 5200,
+      "createdAt": "2026-11-22T19:50:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 9,
+      "orderNumber": "#1016",
+      "customerName": "بلقيس أحمد الوزير",
+      "phone": "773918274",
+      "address": "صنعاء — حدة، المدينة السكنية",
+      "items": [
+        { "name": "ساعة ذكية رياضية", "quantity": 1 },
+        { "name": "سوار إضافي سيليكون", "quantity": 2 }
+      ],
+      "amount": 32000,
+      "createdAt": "2026-11-22T16:05:00",
+      "status": "في الطريق"
+    },
+    {
+      "id": 10,
+      "orderNumber": "#1015",
+      "customerName": "طارق نبيل الشيباني",
+      "phone": "778301945",
+      "address": "صنعاء — الحصبة، شارع مازدا",
+      "items": [
+        { "name": "حقيبة ظهر للكمبيوتر", "quantity": 1 }
+      ],
+      "amount": 7400,
+      "createdAt": "2026-11-22T13:20:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 11,
+      "orderNumber": "#1014",
+      "customerName": "هدى منصور الجنداري",
+      "phone": "714920384",
+      "address": "صنعاء — شارع تعز، جولة الثلاثين",
+      "items": [
+        { "name": "مجموعة عناية بالبشرة", "quantity": 1 },
+        { "name": "مرطب طبي", "quantity": 2 }
+      ],
+      "amount": 11900,
+      "createdAt": "2026-11-21T21:00:00",
+      "status": "جديد"
+    },
+    {
+      "id": 12,
+      "orderNumber": "#1013",
+      "customerName": "أسامة فيصل الدعيس",
+      "phone": "772648190",
+      "address": "صنعاء — شملان، جولة مذبح",
+      "items": [
+        { "name": "بطارية متنقلة 20000mAh", "quantity": 1 },
+        { "name": "كيبل شحن مضفر", "quantity": 2 }
+      ],
+      "amount": 15000,
+      "createdAt": "2026-11-21T17:35:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 13,
+      "orderNumber": "#1012",
+      "customerName": "ريم سلطان المخلافي",
+      "phone": "738192045",
+      "address": "صنعاء — شارع إيران، حي دبلوماسي",
+      "items": [
+        { "name": "ماكينة تحضير قهوة", "quantity": 1 }
+      ],
+      "amount": 19300,
+      "createdAt": "2026-11-21T14:15:00",
+      "status": "في الطريق"
+    },
+    {
+      "id": 14,
+      "orderNumber": "#1011",
+      "customerName": "عادل صالح العولقي",
+      "phone": "776501928",
+      "address": "صنعاء — الجراف، خط المطار",
+      "items": [
+        { "name": "قميص رجالي قطني", "quantity": 2 }
+      ],
+      "amount": 6800,
+      "createdAt": "2026-11-20T19:20:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 15,
+      "orderNumber": "#1010",
+      "customerName": "سمية جمال الحيمي",
+      "phone": "771049283",
+      "address": "صنعاء — الصافية، جوار مكتب البريد",
+      "items": [
+        { "name": "طقم أواني طهي تيفال", "quantity": 1 }
+      ],
+      "amount": 13500,
+      "createdAt": "2026-11-20T15:00:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 16,
+      "orderNumber": "#1009",
+      "customerName": "وليد عبده النهمي",
+      "phone": "735910284",
+      "address": "صنعاء — سعوان، جولة النصر",
+      "items": [
+        { "name": "مصباح مكتب LED قابل للشحن", "quantity": 1 }
+      ],
+      "amount": 4900,
+      "createdAt": "2026-11-20T11:30:00",
+      "status": "جديد"
+    },
+    {
+      "id": 17,
+      "orderNumber": "#1008",
+      "customerName": "إبراهيم لطف الآنسي",
+      "phone": "779203841",
+      "address": "صنعاء — باب اليمن، السائلة",
+      "items": [
+        { "name": "بخور عدني فاخر", "quantity": 2 },
+        { "name": "مبخرة خشبية مطعمة", "quantity": 1 }
+      ],
+      "amount": 24000,
+      "createdAt": "2026-11-19T20:15:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 18,
+      "orderNumber": "#1007",
+      "customerName": "أروى زيد المحطوري",
+      "phone": "711839204",
+      "address": "صنعاء — شارع بغداد، جولة كنتاكي",
+      "items": [
+        { "name": "كتب برمجة وتصميم", "quantity": 3 }
+      ],
+      "amount": 10700,
+      "createdAt": "2026-11-19T16:45:00",
+      "status": "في الطريق"
+    },
+    {
+      "id": 19,
+      "orderNumber": "#1006",
+      "customerName": "حمزة عبدالملك الرضي",
+      "phone": "774109283",
+      "address": "صنعاء — السنينة، شارع الثلاثين",
+      "items": [
+        { "name": "حذاء رياضي للمشي", "quantity": 1 }
+      ],
+      "amount": 8100,
+      "createdAt": "2026-11-19T12:10:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 20,
+      "orderNumber": "#1005",
+      "customerName": "لبنى شرف العميسي",
+      "phone": "770918273",
+      "address": "صنعاء — الحي السياسي، شارع عمان",
+      "items": [
+        { "name": "جهاز قياس ضغط رقمي", "quantity": 1 },
+        { "name": "فيتامينات مكملة", "quantity": 2 }
+      ],
+      "amount": 27500,
+      "createdAt": "2026-11-18T18:55:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 21,
+      "orderNumber": "#1004",
+      "customerName": "ماجد حسن الصلاحي",
+      "phone": "737281940",
+      "address": "صنعاء — دار سلم، شارع مأرب",
+      "items": [
+        { "name": "منظم مكتب خشبي", "quantity": 1 },
+        { "name": "دفتر ملاحظات جلدي", "quantity": 2 }
+      ],
+      "amount": 5600,
+      "createdAt": "2026-11-18T14:40:00",
+      "status": "جديد"
+    },
+    {
+      "id": 22,
+      "orderNumber": "#1003",
+      "customerName": "شيماء توفيق البعداني",
+      "phone": "775839102",
+      "address": "صنعاء — شارع الرقاص، جولة الرويشان",
+      "items": [
+        { "name": "مجفف شعر احترافي", "quantity": 1 }
+      ],
+      "amount": 16400,
+      "createdAt": "2026-11-18T10:25:00",
+      "status": "تم التوصيل"
+    },
+    {
+      "id": 23,
+      "orderNumber": "#1002",
+      "customerName": "بسام علي الشرعبي",
+      "phone": "772019384",
+      "address": "صنعاء — المطار الجديد، حي الروضة",
+      "items": [
+        { "name": "راوتر منزلي 4G", "quantity": 1 }
+      ],
+      "amount": 9200,
+      "createdAt": "2026-11-17T17:15:00",
+      "status": "في الطريق"
+    },
+    {
+      "id": 24,
+      "orderNumber": "#1001",
+      "customerName": "منال عبدالوهاب الحجري",
+      "phone": "734829103",
+      "address": "صنعاء — عصر، جولة عصر العليا",
+      "items": [
+        { "name": "غلاية ماء كهربائية ستيل", "quantity": 1 },
+        { "name": "شاي كبوس عبوة كبيرة", "quantity": 2 }
+      ],
+      "amount": 12800,
+      "createdAt": "2026-11-17T13:05:00",
+      "status": "تم التوصيل"
+    }
+  ],
+  "dashboard": {
+    "stats": [
+      {
+        "label": "إجمالي الطلبات المسجلة",
+        "value": "24",
+        "delta": 14.2,
+        "footnote": "مقارنة بالأسبوع الماضي"
+      },
+      {
+        "label": "طلبات في الطريق",
+        "value": "6",
+        "delta": 5.4,
+        "footnote": "قيد التوصيل حالياً"
+      },
+      {
+        "label": "نسبة التوصيل المكتمل",
+        "value": "94%",
+        "delta": 2.1,
+        "footnote": "خلال آخر 30 يوماً"
+      }
+    ],
+    "dailyComparison": [
+      { "date": "18 نوفمبر", "delivered": 24, "inTransit": 9 },
+      { "date": "19 نوفمبر", "delivered": 28, "inTransit": 11 },
+      { "date": "20 نوفمبر", "delivered": 25, "inTransit": 8 },
+      { "date": "21 نوفمبر", "delivered": 31, "inTransit": 12 },
+      { "date": "22 نوفمبر", "delivered": 29, "inTransit": 10 },
+      { "date": "23 نوفمبر", "delivered": 35, "inTransit": 14 },
+      { "date": "24 نوفمبر", "delivered": 38, "inTransit": 13 }
+    ],
+    "statusDistribution": [
+      { "key": "delivered", "name": "تم التوصيل", "value": 13 },
+      { "key": "inTransit", "name": "في الطريق", "value": 6 },
+      { "key": "newOrder", "name": "جديد", "value": 5 }
+    ],
+    "weeklyOrders": [
+      { "label": "السبت", "delivered": 29, "inTransit": 6, "newOrder": 4, "total": 39 },
+      { "label": "الأحد", "delivered": 34, "inTransit": 8, "newOrder": 5, "total": 47 },
+      { "label": "الإثنين", "delivered": 31, "inTransit": 7, "newOrder": 4, "total": 42 },
+      { "label": "الثلاثاء", "delivered": 38, "inTransit": 9, "newOrder": 6, "total": 53 },
+      { "label": "الأربعاء", "delivered": 36, "inTransit": 7, "newOrder": 5, "total": 48 },
+      { "label": "الخميس", "delivered": 42, "inTransit": 10, "newOrder": 7, "total": 59 },
+      { "label": "الجمعة", "delivered": 25, "inTransit": 5, "newOrder": 3, "total": 33 }
+    ],
+    "recentOrders": [
+      {
+        "id": 1,
+        "orderNumber": "#1024",
+        "customerName": "أحمد عبدالكريم المتوكل",
+        "phone": "777412580",
+        "address": "صنعاء — حي حدة، جولة المصباحي",
+        "items": [
+          { "name": "سماعة بلوتوث لاسلكية", "quantity": 1 },
+          { "name": "شاحن سريع 65W", "quantity": 1 }
+        ],
+        "amount": 8500,
+        "createdAt": "2026-11-24T14:30:00",
+        "status": "جديد"
+      },
+      {
+        "id": 2,
+        "orderNumber": "#1023",
+        "customerName": "فاطمة محمد الشامي",
+        "phone": "771938420",
+        "address": "صنعاء — شارع الزبيري، أمام مستشفى الجمهوري",
+        "items": [
+          { "name": "حقيبة جلدية نسائية", "quantity": 1 },
+          { "name": "عطر عود ملكي 100مل", "quantity": 1 }
+        ],
+        "amount": 14200,
+        "createdAt": "2026-11-24T12:15:00",
+        "status": "في الطريق"
+      },
+      {
+        "id": 3,
+        "orderNumber": "#1022",
+        "customerName": "خالد يحيى الأرياني",
+        "phone": "733615290",
+        "address": "صنعاء — الأصبحي، شارع المقالح",
+        "items": [
+          { "name": "بن يمني خولاني 1 كجم", "quantity": 1 }
+        ],
+        "amount": 6000,
+        "createdAt": "2026-11-24T10:45:00",
+        "status": "تم التوصيل"
+      },
+      {
+        "id": 4,
+        "orderNumber": "#1021",
+        "customerName": "سارة علي العواضي",
+        "phone": "774820195",
+        "address": "صنعاء — بيت بوس، حي الشباب",
+        "items": [
+          { "name": "خلاط كهربائي منزلي", "quantity": 1 },
+          { "name": "طقم فناجين قهوة", "quantity": 2 }
+        ],
+        "amount": 21500,
+        "createdAt": "2026-11-23T20:30:00",
+        "status": "تم التوصيل"
+      }
+    ],
+    "couriers": [
+      { "id": "c1", "name": "محمد الحمادي", "status": "متصل", "assigned": 6 },
+      { "id": "c2", "name": "عبدالله السنباني", "status": "متصل", "assigned": 5 },
+      { "id": "c3", "name": "ياسر المقطري", "status": "في استراحة", "assigned": 2 },
+      { "id": "c4", "name": "أكرم الشيباني", "status": "متصل", "assigned": 7 },
+      { "id": "c5", "name": "صالح العولقي", "status": "في استراحة", "assigned": 1 }
+    ],
+    "activities": [
+      {
+        "id": "act-1",
+        "title": "تسجيل طلب توصيل جديد #1024 باسم أحمد المتوكل",
+        "time": "منذ 5 دقائق",
+        "type": "new"
+      },
+      {
+        "id": "act-2",
+        "title": "انطلاق المندوب بالطلب #1023 نحو شارع الزبيري",
+        "time": "منذ 18 دقيقة",
+        "type": "transit"
+      },
+      {
+        "id": "act-3",
+        "title": "تم توصيل الطلب #1022 بنجاح في الأصبحي",
+        "time": "منذ 42 دقيقة",
+        "type": "delivered"
+      },
+      {
+        "id": "act-4",
+        "title": "تحصيل مبلغ الطلب #1021 عند التسليم في بيت بوس",
+        "time": "منذ ساعتين",
+        "type": "payment"
+      }
+    ]
+  }
+}
