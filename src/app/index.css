@@ -1,1 +1,203 @@
+@import "tailwindcss";
+@import "shadcn/tailwind.css";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
 
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ── Evan Code Brand Palette — Light Mode ── */
+  --background: #F6F8F6;
+  --foreground: #2A362F;
+  --card: #FFFFFF;
+  --card-foreground: #2A362F;
+  --popover: #FFFFFF;
+  --popover-foreground: #2A362F;
+
+  /* Brand Forest (#0B120E) + Evan Lime (#C6FF00) */
+  --primary: #18231C;
+  --primary-foreground: #FFFFFF;
+  --brand-lime: #C6FF00;
+  --brand-lime-foreground: #18231C;
+
+  --secondary: #EBF0EB;
+  --secondary-foreground: #2A362F;
+  --muted: #EDF1ED;
+  --muted-foreground: #748078;
+  --accent: #E6F4D0;
+  --accent-foreground: #0B120E;
+
+  --success: #DCFCE7;
+  --success-foreground: #14532D;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E2E8E2;
+  --input: #E2E8E2;
+  --ring: #84CC16;
+
+  /* Harmonious Evan Forest & Lime Chart Scale */
+  --chart-1: #0B120E;
+  --chart-2: #65A30D;
+  --chart-3: #16A34A;
+  --chart-4: #A3E635;
+  --chart-5: #4D7C0F;
+
+  --radius: 0.625rem;
+
+  /* Unified Outer Shell (Sidebar + Top Navbar) */
+  --sidebar: #EAEFEA;
+  --sidebar-foreground: #2A362F;
+  --sidebar-primary: #18231C;
+  --sidebar-primary-foreground: #C6FF00;
+  --sidebar-accent: #DDE5DD;
+  --sidebar-accent-foreground: #1E2923;
+  --sidebar-border: #D6DFD6;
+  --sidebar-ring: #84CC16;
+
+  --scrollbar-thumb: color-mix(in oklab, #0B120E 28%, transparent);
+  --scrollbar-thumb-hover: #0B120E;
+}
+
+.dark {
+  /* ── Evan Code Brand Palette — Dark Forest Mode ── */
+  --background: #0D1510;
+  --foreground: #F5F7F5;
+  --card: #070A08;
+  --card-foreground: #F5F7F5;
+  --popover: #070A08;
+  --popover-foreground: #F5F7F5;
+
+  --primary: #C6FF00;
+  --primary-foreground: #0B120E;
+  --brand-lime: #C6FF00;
+  --brand-lime-foreground: #0B120E;
+
+  --secondary: #18251D;
+  --secondary-foreground: #E4ECE6;
+  --muted: #16221B;
+  --muted-foreground: #8F9E94;
+  --accent: #1D2E23;
+  --accent-foreground: #C6FF00;
+
+  --success: #14532D;
+  --success-foreground: #DCFCE7;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #203026;
+  --input: #203026;
+  --ring: #C6FF00;
+
+  /* Calm, low-glare muted sage & teal palette for Dark Mode charts */
+  --chart-1: #6EA884;
+  --chart-2: #95BA7B;
+  --chart-3: #58938A;
+  --chart-4: #A8C496;
+  --chart-5: #4A7A63;
+
+  /* Unified Outer Shell (Sidebar + Top Navbar) */
+  --sidebar: #070C09;
+  --sidebar-foreground: #E4ECE6;
+  --sidebar-primary: #C6FF00;
+  --sidebar-primary-foreground: #0B120E;
+  --sidebar-accent: #142019;
+  --sidebar-accent-foreground: #F5F7F5;
+  --sidebar-border: #1A2820;
+  --sidebar-ring: #C6FF00;
+
+  --scrollbar-thumb: color-mix(in oklab, #C6FF00 32%, transparent);
+  --scrollbar-thumb-hover: #C6FF00;
+}
+
+@theme inline {
+  --font-sans: "IBM Plex Sans Arabic", sans-serif;
+  --font-heading: "IBM Plex Sans Arabic", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-lime-foreground: var(--brand-lime-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+
+  body {
+    @apply bg-sidebar font-sans text-foreground antialiased selection:bg-brand-lime selection:text-brand-lime-foreground;
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 9999px;
+    transition: background-color 0.25s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

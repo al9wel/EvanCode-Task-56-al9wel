@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +25,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI Agents, Skills & MCP Configurations
+.agents/
+.agent/
+_agents/
+_agent/
+.gemini/
+.claude/
+.cursor/
+.windsurf/
+.codex/
+.cline/
+.copilot/
+.roo/
+skills-lock.json
+mcp_config.json
+.mcp.json
+AGENTS.md
+CLAUDE.md
+GEMINI.md
