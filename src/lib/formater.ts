@@ -1,3 +1,5 @@
+import type { OrderStatus } from "@/types/Order"
+
 export const DASHBOARD_LOCALE = "ar-YE"
 export const DASHBOARD_CURRENCY = "YER"
 
@@ -54,4 +56,14 @@ export function formatCurrency(value: number): string {
   return `${new Intl.NumberFormat(DASHBOARD_LOCALE, {
     maximumFractionDigits: 0,
   }).format(value)} ر.ي`
+}
+
+export function getOrderStatusBadgeClass(status: OrderStatus): string {
+  if (status === "تم التوصيل") {
+    return "border-transparent bg-success text-success-foreground"
+  }
+  if (status === "جديد") {
+    return "border-transparent bg-brand-lime text-brand-lime-foreground"
+  }
+  return ""
 }

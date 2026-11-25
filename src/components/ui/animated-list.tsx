@@ -15,7 +15,7 @@ export function AnimatedListItem({ children }: { children: React.ReactNode }) {
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1, originY: 0 },
     exit: { scale: 0, opacity: 0 },
-    transition: { type: "spring", stiffness: 210, damping: 28 },
+    transition: { type: "spring", stiffness: 170, damping: 26 },
   }
 
   return (
